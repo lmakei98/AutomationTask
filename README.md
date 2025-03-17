@@ -16,7 +16,7 @@ This project is an automated testing suite for validating various functionalitie
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/your-username/AutomationTask.git
+    git clone https://github.com/lmakei98/AutomationTask
     cd AutomationTask
     ```
 
