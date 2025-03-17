@@ -9,6 +9,7 @@ This project is an automated testing suite for validating various functionalitie
 - Java 11
 - Maven
 - Chrome Browser
+- IDE plugin providing Gherkin language support (for IntelliJ - Gherkin)
 - Machine location is Lithuania (make sure you are not running a VPN in another country)
 
 ### Installation
