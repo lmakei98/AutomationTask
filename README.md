@@ -22,7 +22,7 @@ This project is an automated testing suite for validating various functionalitie
 
 2. Install the dependencies:
     ```sh
-    mvn clean install
+    mvn clean install -DskipTests
     ```
 
 ## Running Tests
