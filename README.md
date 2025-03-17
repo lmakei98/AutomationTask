@@ -19,46 +19,34 @@ This project is an automated testing suite for validating various functionalitie
     git clone https://github.com/lmakei98/AutomationTask
     cd AutomationTask
     ```
-2. 
 
-3. Install the dependencies:
+2. Install the dependencies:
     ```sh
     mvn clean install -DskipTests
     ```
 
 ## Running Tests
 
-### Setup Instructions
+### Running TestNG Tests
 
-#### 1. Clone the Repository
-Clone the repository to your local machine using the following command:
+To run the TestNG tests, use the following command:
 ```sh
-git clone https://github.com/lmakei98/AutomationTask
+mvn test
 ```
 
-#### 2. Open the Project in IntelliJ IDEA
-1. Open IntelliJ IDEA.
-2. Click on `File` > `Open`.
-3. Navigate to the cloned repository directory and select the `pom.xml` file.
-4. Click `Open as Project`.
+### Running Cucumber Tests
 
-#### 3. Import Maven Dependencies
-IntelliJ IDEA should automatically detect the `pom.xml` file and import the Maven dependencies. If not, follow these steps:
-1. Open the `Maven` tool window (View > Tool Windows > Maven).
-2. Click on the `Reload All Maven Projects` button.
+To run the Cucumber tests, use the following command:
+```sh
+mvn test -Dcucumber.options="--tags @Regression"
+```
 
-#### 4. Run Automation Tests
+### Running Specific Cucumber Feature
 
-##### Run E2E which verifies positive scenario
-1. Open the `src/test/java/e2e/TestSuccessfulPurchaseFlow.java` file.
-2. Right-click on the class name `TestSuccessfulPurchaseFlow`.
-3. Select `Run 'TestSuccessfulPurchaseFlow'`.
-
-##### Run seperate 8 tests which verify the proper validatons are added
-1. Open the `src/test/java/cucumber/TestNGTestRunner.java` file.
-2. Right-click on the feature file.
-3. Select `Run 'TestNGTestRunner'`.
-
+To run a specific Cucumber feature file, use the following command:
+```sh
+mvn test -Dcucumber.options="src/test/java/cucumber/features/TestValidationsOnPurchaseScreen.feature"
+```
 
 ## Project Structure
 
