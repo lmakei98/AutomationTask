@@ -3,6 +3,7 @@ package elements;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.FluentWait;
 import pages.PurchasePage;
@@ -21,7 +22,9 @@ public class ShoppingBagDrawer extends AbstractPage {
     }
 
     public PurchasePage proceedToCheckout() {
-        driver.findElement(checkOutButtonLocator).click();
+        WebElement element = driver.findElement(checkOutButtonLocator);
+        waitForElementToBeClickable(element);
+        element.click();
         PurchasePage purchasePage = new PurchasePage(driver);
 
         FluentWait<WebDriver> wait = new FluentWait<>(driver)

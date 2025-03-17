@@ -230,9 +230,12 @@ public class PurchasePage extends AbstractPage {
      */
     public void applyDiscountCode(String discountCode) {
         driver.findElement(addDiscountButtonLocator).click();
-        driver.findElement(discountCodeInputLocator).sendKeys(discountCode);
-        driver.findElement(applyDiscountButtonLocator).click();
 
+        WebElement discountCodeInput = driver.findElement(discountCodeInputLocator);
+        waitForElementToBeVisible(discountCodeInput);
+        discountCodeInput.sendKeys(discountCode);
+
+        driver.findElement(applyDiscountButtonLocator).click();
         waitForElementToLoad(driver.findElement(applyDiscountButtonLocator));
     }
 
@@ -302,7 +305,7 @@ public class PurchasePage extends AbstractPage {
         WebElement element = driver.findElement(phoneNumberTextBoxLocator);
         element.sendKeys(phoneNumber);
 
-        if(phoneNumber.length() == 8) {
+        if (phoneNumber.length() == 8) {
             FluentWait<WebDriver> wait = new FluentWait<>(driver)
                     .withTimeout(Duration.ofSeconds(10))
                     .pollingEvery(Duration.ofSeconds(1))
