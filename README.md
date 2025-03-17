@@ -1,6 +1,6 @@
 # AutomationTask
 
-This project is an automated testing suite for validating various functionalities on a web application using Java 11 Selenium WebDriver, TestNG, and Cucumber.
+This project is an automated testing suite for validating various functionalities on a web application using Java 11, Selenium WebDriver, TestNG and Cucumber.
 
 ## Project Setup
 
@@ -9,7 +9,6 @@ This project is an automated testing suite for validating various functionalitie
 - Java 11
 - Maven
 - Chrome Browser
-- ChromeDriver
 - Machine location is Lithuania (make sure you are not running a VPN in another country)
 
 ### Installation
