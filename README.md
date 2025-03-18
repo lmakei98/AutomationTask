@@ -41,6 +41,13 @@ To run positive E2E test, use the following command:
 mvn -Dtest=TestSuccessfulPurchaseFlow test
 ```
 
+### Running all available tests 
+
+To run all available tests within one run, use the following command:
+```sh
+mvn -Dtest=TestSuccessfulPurchaseFlow,cucumber.TestNGTestRunner test
+```
+
 ## Project Structure
 
 - `src/main/java/pages`: Contains page object classes representing different pages of the web application.
