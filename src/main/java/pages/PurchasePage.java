@@ -10,7 +10,6 @@ import java.time.Duration;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static org.openqa.selenium.Keys.DELETE;
 import static org.openqa.selenium.Keys.TAB;
 
 /**
@@ -51,6 +50,9 @@ public class PurchasePage extends AbstractPage {
     public PurchasePage(WebDriver driver) {
         super(driver);
         this.driver = driver;
+
+        waitForElementToAppear(shippingDestinationLocator);
+        waitForElementToLoad(driver.findElement(shippingDestinationLocator));
     }
 
     /**
@@ -343,7 +345,6 @@ public class PurchasePage extends AbstractPage {
      */
     public void clearShippingDestination() {
         actions.moveToElement(driver.findElement(shippingDestinationLocator))
-                .click()
                 .doubleClick()
                 .sendKeys(Keys.DELETE)
                 .sendKeys(TAB)

@@ -5,7 +5,7 @@ Feature: Test validations on purchase screen
 
   @Regression
   Scenario: Validate Shipping destination is required
-  User leaves Shipping destination field empty
+    When User leaves Shipping destination field empty
     Then Validate Shipping destination required error message is displayed
 
   @Regression
