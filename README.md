@@ -1,6 +1,6 @@
 # AutomationTask
 
-This project is an automated testing suite for validating various functionalities on a web application using Java 11, Selenium WebDriver, TestNG and Cucumber.
+This project is an automated testing suite for validating various functionalities on a web application using Java 11, Maven, Selenium WebDriver, TestNG and Cucumber.
 
 ## Project Setup
 
@@ -9,7 +9,6 @@ This project is an automated testing suite for validating various functionalitie
 - Java 11
 - Maven
 - Chrome Browser
-- IDE plugin providing Gherkin language support (for IntelliJ - Gherkin)
 - Machine location is Lithuania (make sure you are not running a VPN in another country)
 
 ### Installation
@@ -27,25 +26,19 @@ This project is an automated testing suite for validating various functionalitie
 
 ## Running Tests
 
-### Running TestNG Tests
 
-To run the TestNG tests, use the following command:
-```sh
-mvn test
-```
-
-### Running Cucumber Tests
+### Running Cucumber Tests verifying proper validations are added on Purchase screen
 
 To run the Cucumber tests, use the following command:
 ```sh
 mvn test -Dcucumber.options="--tags @Regression"
 ```
 
-### Running Specific Cucumber Feature
+### Running TestNG E2E Test verifying positive scenario
 
-To run a specific Cucumber feature file, use the following command:
+To run positive E2E test, use the following command:
 ```sh
-mvn test -Dcucumber.options="src/test/java/cucumber/features/TestValidationsOnPurchaseScreen.feature"
+mvn -Dtest=TestSuccessfulPurchaseFlow test
 ```
 
 ## Project Structure
