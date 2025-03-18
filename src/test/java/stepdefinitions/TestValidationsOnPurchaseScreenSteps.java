@@ -16,7 +16,7 @@ import java.io.IOException;
 import static constants.ErrorMessages.*;
 import static org.testng.Assert.assertEquals;
 
-public class PurchaseStepDefinitionImpl extends BaseTest {
+public class TestValidationsOnPurchaseScreenSteps extends BaseTest {
     private PurchasePage purchasePage;
 
     @Given("Product purchase is initiated")
