@@ -16,7 +16,7 @@ public class BaseTest {
     protected HomePage homePage;
     protected Actions actions;
 
-    public WebDriver initializeDriver() throws IOException {
+    public WebDriver initializeDriver() {
         if (driver.get() == null) {
             WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
@@ -45,9 +45,5 @@ public class BaseTest {
             driver.get().quit();
             driver.remove();
         }
-    }
-
-    public static WebDriver getDriver() {
-        return driver.get();
     }
 }
